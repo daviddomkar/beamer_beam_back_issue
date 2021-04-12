@@ -6,7 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final routerDelegate = BeamerRouterDelegate(
+  final routerDelegate = RootRouterDelegate(
     locationBuilder: BeamerLocationBuilder(
       beamLocations: [
         RootLocation(),
@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       routeInformationParser: BeamerRouteInformationParser(),
       routerDelegate: routerDelegate,
-      backButtonDispatcher: BeamerBackButtonDispatcher(delegate: routerDelegate),
+      backButtonDispatcher:
+          BeamerBackButtonDispatcher(delegate: routerDelegate),
     );
   }
 }
